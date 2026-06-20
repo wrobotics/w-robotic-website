@@ -18,3 +18,12 @@ Hero section now uses the official WRC logo image instead of text 'Wellington Ro
 
 ## Update
 Logo background removed. Hero now uses `assets/wrc-logo-transparent.png` and logo size is reduced to 420px.
+
+## v2.2 bilingual update
+Added Chinese homepage at `/zh/` and EN/中文 language switch links.
+
+## Link fix
+Language switch links now use explicit file paths: `./zh/index.html` and `../index.html`, so they work in local preview and after deployment.
+
+## Typography update
+English version now uses a Tesla/Apple-inspired system font stack: SF Pro, Avenir Next, Helvetica Neue, Inter and system fallbacks, with tighter headings and modern letter spacing.

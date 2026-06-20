@@ -13,10 +13,14 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+  font-family:"SF Pro Display","SF Pro Text","Avenir Next","Helvetica Neue",Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
   color:var(--text);
   background:#fff;
   line-height:1.5;
+  font-weight:400;
+  letter-spacing:-0.01em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:geometricPrecision;
 }
 
 a{color:inherit;text-decoration:none}
@@ -43,10 +47,10 @@ a{color:inherit;text-decoration:none}
 .desktop-nav{
   display:flex;
   gap:34px;
-  font-size:13px;
-  letter-spacing:.08em;
+  font-size:12px;
+  letter-spacing:.14em;
   text-transform:uppercase;
-  font-weight:600;
+  font-weight:700;
 }
 .desktop-nav a{
   opacity:.78;
@@ -152,11 +156,12 @@ h1{
 }
 .hero h2{
   margin:0 auto 0;
-  font-size:clamp(26px,4vw,54px);
-  line-height:1.02;
-  max-width:960px;
-  letter-spacing:-.04em;
+  font-size:clamp(28px,4.2vw,58px);
+  line-height:.98;
+  max-width:980px;
+  letter-spacing:-.055em;
   color:#15171b;
+  font-weight:760;
 }
 .slogan{
   display:flex;
@@ -165,8 +170,8 @@ h1{
   margin:22px 0 0;
   text-transform:uppercase;
   letter-spacing:.16em;
-  font-weight:800;
-  font-size:13px;
+  font-weight:760;
+  font-size:12px;
 }
 .slogan span:nth-child(1){color:var(--red)}
 .slogan span:nth-child(2){color:#d89b00}
@@ -228,9 +233,10 @@ h1{
 .section-heading h2{
   margin:0;
   color:var(--navy);
-  font-size:clamp(40px,7vw,86px);
-  line-height:.92;
-  letter-spacing:-.055em;
+  font-size:clamp(42px,7vw,88px);
+  line-height:.9;
+  letter-spacing:-.065em;
+  font-weight:760;
 }
 .section-copy{
   margin:22px 0 0;
@@ -274,7 +280,8 @@ h3{
   margin:0 0 10px;
   color:var(--navy);
   font-size:22px;
-  letter-spacing:-.02em;
+  letter-spacing:-.03em;
+  font-weight:760;
 }
 .values-grid p,
 .programme-card p,
@@ -434,4 +441,73 @@ h3{
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .btn{transition:none}
+}
+
+.lang-switch{
+  color:var(--red)!important;
+  font-weight:800!important;
+}
+
+
+html[lang="en"] body{
+  font-family:"SF Pro Display","SF Pro Text","Avenir Next","Helvetica Neue",Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+
+html[lang="zh-CN"] body{
+  font-family:"PingFang SC","SF Pro Display","SF Pro Text","Noto Sans SC","HarmonyOS Sans SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  letter-spacing:0;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+html[lang="zh-CN"] h1,
+html[lang="zh-CN"] h2,
+html[lang="zh-CN"] h3{
+  font-family:"PingFang SC","SF Pro Display","Noto Sans SC","HarmonyOS Sans SC",sans-serif;
+  font-weight:700;
+  letter-spacing:-0.03em;
+}
+
+html[lang="zh-CN"] .eyebrow,
+html[lang="zh-CN"] .desktop-nav,
+html[lang="zh-CN"] .mobile-nav{
+  font-weight:700;
+  letter-spacing:0.08em;
+}
+
+html[lang="zh-CN"] .hero h2{
+  font-weight:700;
+  letter-spacing:-0.04em;
+}
+
+
+
+/* WRC Website v2.3 Chinese typography refinement */
+html[lang="zh-CN"] .cn-nowrap{
+  white-space:nowrap;
+  display:inline-block;
+}
+
+html[lang="zh-CN"] h2{
+  font-size:clamp(32px,4vw,60px);
+  line-height:1.08;
+}
+
+html[lang="zh-CN"] .section-heading h2{
+  max-width:none;
+}
+
+html[lang="zh-CN"] .hero h2{
+  font-size:clamp(38px,5vw,68px);
+  white-space:nowrap;
+}
+
+@media (max-width:768px){
+  html[lang="zh-CN"] .hero h2{
+    white-space:normal;
+  }
+  html[lang="zh-CN"] .cn-nowrap{
+    white-space:normal;
+  }
 }
