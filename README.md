@@ -1,29 +1,20 @@
-# Wellington Robotics Club Website
+# WRC Website v2.1
 
-A minimalist Tesla-inspired landing page for Wellington Robotics Club.
+Static Tesla-style website for Wellington Robotics Club.
 
 ## Files
+- index.html
+- styles.css
+- script.js
+- assets/wrc-logo.png
+- assets/favicon.svg
+- assets/wrc-brand-corner.png
 
-- `index.html`
-- `styles.css`
-- `assets/wrc-logo.png`
+## Deployment
+Upload the full folder contents to the existing GitHub repository and redeploy with Cloudflare Pages.
 
-## Deploy to Cloudflare Pages
+## Update
+Hero section now uses the official WRC logo image instead of text 'Wellington Robotics Club / WRC'.
 
-1. Create a GitHub repository.
-2. Upload all files in this folder.
-3. Open Cloudflare Pages.
-4. Connect the GitHub repository.
-5. Build settings:
-   - Framework preset: None
-   - Build command: leave empty
-   - Output directory: `/`
-6. Add custom domain: `w-robotic.com`
-
-## Update contact email
-
-In `index.html`, replace:
-
-`info@w-robotic.com`
-
-with your real club email address.
+## Update
+Logo background removed. Hero now uses `assets/wrc-logo-transparent.png` and logo size is reduced to 420px.
