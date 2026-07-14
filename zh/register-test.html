@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>报名意向表 | 惠灵顿机器人俱乐部</title>
+  <meta name="description" content="登记您对惠灵顿机器人俱乐部课程和体验课的兴趣。" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="registration-page">
+  <header class="site-header scrolled">
+    <a class="brand" href="index.html" aria-label="返回惠灵顿机器人俱乐部首页">
+      <img src="../assets/wrc-logo-transparent.png" alt="Wellington Robotics Club logo" />
+    </a>
+    <nav class="desktop-nav" aria-label="报名页面导航">
+      <a href="index.html">返回官网</a>
+      <a class="lang-switch" href="../register-test.html">EN</a>
+    </nav>
+    <a class="registration-back-mobile" href="index.html">返回</a>
+  </header>
+
+  <main class="registration-shell">
+    <section class="registration-intro">
+      <p class="eyebrow">加入 WRC</p>
+      <h1>开启机器人学习旅程。</h1>
+      <p>请简单介绍学生的情况，我们会根据年龄、经验和兴趣推荐合适的课程或体验活动。</p>
+      <div class="registration-steps" aria-label="报名流程">
+        <div><span>01</span><strong>填写兴趣</strong><small>大约 2 分钟</small></div>
+        <div><span>02</span><strong>课程匹配</strong><small>由 WRC 团队查看</small></div>
+        <div><span>03</span><strong>联系家长</strong><small>通过邮件确认下一步</small></div>
+      </div>
+      <p class="test-badge">测试模版 · 不会发送任何资料</p>
+    </section>
+
+    <section class="registration-card" aria-labelledby="form-title">
+      <div class="form-heading">
+        <p class="eyebrow">报名意向登记</p>
+        <h2 id="form-title">学生信息</h2>
+        <p>带 * 的项目为必填项。</p>
+      </div>
+
+      <aside class="sheet-connection" aria-label="Google Sheet 测试连接状态">
+        <span class="connection-dot" aria-hidden="true"></span>
+        <div>
+          <strong>Google Sheet 测试连接</strong>
+          <small>测试模式——提交后会在本页预览，但不会写入 Google Drive。</small>
+        </div>
+        <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">打开示例表格</a>
+      </aside>
+
+      <form class="registration-form" data-registration-form novalidate>
+        <div class="form-grid two-columns">
+          <label><span>学生名字 *</span><input type="text" name="studentName" autocomplete="given-name" required /></label>
+          <label>
+            <span>学生年龄 *</span>
+            <select name="studentAge" required><option value="">请选择年龄</option><option>6–8 岁</option><option>9–11 岁</option><option>12–14 岁</option><option>15–17 岁</option><option>18 岁以上</option></select>
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>机器人或编程经验 *</legend>
+          <div class="choice-grid">
+            <label class="choice-card"><input type="radio" name="experience" value="零基础" required /><span><strong>零基础</strong><small>刚开始接触机器人与编程</small></span></label>
+            <label class="choice-card"><input type="radio" name="experience" value="有一些经验" /><span><strong>有一些经验</strong><small>曾经搭建机器人或编写程序</small></span></label>
+            <label class="choice-card"><input type="radio" name="experience" value="竞赛经验" /><span><strong>竞赛经验</strong><small>参加过机器人赛事</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>学生感兴趣的方向 *</legend>
+          <div class="interest-grid">
+            <label><input type="checkbox" name="interest" value="机器人基础" /><span>机器人基础</span></label>
+            <label><input type="checkbox" name="interest" value="编程与工程" /><span>编程与工程</span></label>
+            <label><input type="checkbox" name="interest" value="RoboCup Junior" /><span>RoboCup Junior</span></label>
+            <label><input type="checkbox" name="interest" value="VEX IQ" /><span>VEX IQ</span></label>
+            <label><input type="checkbox" name="interest" value="体验课" /><span>体验课</span></label>
+            <label><input type="checkbox" name="interest" value="暂不确定" /><span>暂不确定</span></label>
+          </div>
+          <p class="field-error" data-interest-error>请至少选择一个兴趣方向。</p>
+        </fieldset>
+
+        <div class="form-grid two-columns">
+          <label><span>方便参加的时间</span><select name="preferredTime"><option value="">暂时没有偏好</option><option>工作日放学后</option><option>星期六</option><option>星期日</option><option>学校假期</option></select></label>
+          <label><span>沟通语言</span><select name="language"><option>中文</option><option>English</option><option>中英文都可以</option></select></label>
+        </div>
+
+        <div class="form-divider"></div>
+        <div class="form-heading compact">
+          <p class="eyebrow">家长或监护人</p>
+          <h2>联系方式</h2>
+        </div>
+
+        <div class="form-grid two-columns">
+          <label><span>家长／监护人姓名 *</span><input type="text" name="guardianName" autocomplete="name" required /></label>
+          <label><span>电子邮箱 *</span><input type="email" name="email" autocomplete="email" required /></label>
+          <label><span>联系电话</span><input type="tel" name="phone" autocomplete="tel" /></label>
+          <label><span>居住区域</span><input type="text" name="suburb" autocomplete="address-level2" /></label>
+        </div>
+
+        <label><span>还有什么需要告诉我们？</span><textarea name="notes" rows="4" placeholder="学习目标、方便时间、问题或需要的支持"></textarea></label>
+        <label class="consent-row"><input type="checkbox" name="consent" required /><span>我同意 WRC 就课程和体验活动与我联系。*</span></label>
+        <p class="privacy-note">正式版本中的资料只用于回复本次咨询，并将按照 WRC 隐私说明进行管理。</p>
+
+        <button class="btn primary submit-button" type="submit">提交报名意向</button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <section class="submission-preview" data-submission-preview hidden aria-label="Google Sheet 新记录预览">
+          <div>
+            <p class="eyebrow">Google Sheet 新记录预览</p>
+            <strong>正式连接后，新报名将以这种方式加入表格。</strong>
+          </div>
+          <dl data-preview-fields></dl>
+          <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">查看已连接的示例表格</a>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <script src="../registration.js"></script>
+</body>
+</html>

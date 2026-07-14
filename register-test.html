@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Interest Form | Wellington Robotics Club</title>
+  <meta name="description" content="Register your interest in Wellington Robotics Club programmes and trial sessions." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="registration-page">
+  <header class="site-header scrolled">
+    <a class="brand" href="index.html" aria-label="Back to Wellington Robotics Club home">
+      <img src="assets/wrc-logo-transparent.png" alt="Wellington Robotics Club logo" />
+    </a>
+    <nav class="desktop-nav" aria-label="Registration navigation">
+      <a href="index.html">Back to Website</a>
+      <a class="lang-switch" href="zh/register-test.html">中文</a>
+    </nav>
+    <a class="registration-back-mobile" href="index.html">Back</a>
+  </header>
+
+  <main class="registration-shell">
+    <section class="registration-intro">
+      <p class="eyebrow">Join WRC</p>
+      <h1>Start your robotics journey.</h1>
+      <p>Tell us a little about the student. Our team will use this information to recommend a suitable programme or trial session.</p>
+      <div class="registration-steps" aria-label="Registration process">
+        <div><span>01</span><strong>Share interests</strong><small>About 2 minutes</small></div>
+        <div><span>02</span><strong>We review</strong><small>Programme matching</small></div>
+        <div><span>03</span><strong>We contact you</strong><small>Next steps by email</small></div>
+      </div>
+      <p class="test-badge">Test template · No information will be sent</p>
+    </section>
+
+    <section class="registration-card" aria-labelledby="form-title">
+      <div class="form-heading">
+        <p class="eyebrow">Expression of Interest</p>
+        <h2 id="form-title">Student details</h2>
+        <p>Fields marked with * are required.</p>
+      </div>
+
+      <aside class="sheet-connection" aria-label="Connected Google Sheet test status">
+        <span class="connection-dot" aria-hidden="true"></span>
+        <div>
+          <strong>Google Sheet test connection</strong>
+          <small>Test mode — submissions are previewed here but not written to Drive.</small>
+        </div>
+        <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">Open example sheet</a>
+      </aside>
+
+      <form class="registration-form" data-registration-form novalidate>
+        <div class="form-grid two-columns">
+          <label>
+            <span>Student first name *</span>
+            <input type="text" name="studentName" autocomplete="given-name" required />
+          </label>
+          <label>
+            <span>Student age *</span>
+            <select name="studentAge" required>
+              <option value="">Select age</option>
+              <option>6–8</option><option>9–11</option><option>12–14</option><option>15–17</option><option>18+</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>Robotics or coding experience *</legend>
+          <div class="choice-grid">
+            <label class="choice-card"><input type="radio" name="experience" value="Beginner" required /><span><strong>Beginner</strong><small>New to robotics and coding</small></span></label>
+            <label class="choice-card"><input type="radio" name="experience" value="Some experience" /><span><strong>Some experience</strong><small>Has built or coded before</small></span></label>
+            <label class="choice-card"><input type="radio" name="experience" value="Competition" /><span><strong>Competition</strong><small>Has joined robotics events</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>What are they interested in? *</legend>
+          <div class="interest-grid">
+            <label><input type="checkbox" name="interest" value="Robotics fundamentals" /><span>Robotics fundamentals</span></label>
+            <label><input type="checkbox" name="interest" value="Coding and engineering" /><span>Coding &amp; engineering</span></label>
+            <label><input type="checkbox" name="interest" value="RoboCup Junior" /><span>RoboCup Junior</span></label>
+            <label><input type="checkbox" name="interest" value="VEX IQ" /><span>VEX IQ</span></label>
+            <label><input type="checkbox" name="interest" value="Trial session" /><span>Trial session</span></label>
+            <label><input type="checkbox" name="interest" value="Not sure" /><span>Not sure yet</span></label>
+          </div>
+          <p class="field-error" data-interest-error>Please choose at least one interest.</p>
+        </fieldset>
+
+        <div class="form-grid two-columns">
+          <label>
+            <span>Preferred time</span>
+            <select name="preferredTime">
+              <option value="">No preference yet</option>
+              <option>Weekday after school</option><option>Saturday</option><option>Sunday</option><option>School holidays</option>
+            </select>
+          </label>
+          <label>
+            <span>Preferred language</span>
+            <select name="language">
+              <option>English</option><option>中文</option><option>Either is fine</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-divider"></div>
+        <div class="form-heading compact">
+          <p class="eyebrow">Parent or guardian</p>
+          <h2>Contact details</h2>
+        </div>
+
+        <div class="form-grid two-columns">
+          <label><span>Parent/guardian name *</span><input type="text" name="guardianName" autocomplete="name" required /></label>
+          <label><span>Email address *</span><input type="email" name="email" autocomplete="email" required /></label>
+          <label><span>Phone number</span><input type="tel" name="phone" autocomplete="tel" /></label>
+          <label><span>Suburb</span><input type="text" name="suburb" autocomplete="address-level2" /></label>
+        </div>
+
+        <label>
+          <span>Anything else we should know?</span>
+          <textarea name="notes" rows="4" placeholder="Learning goals, availability, questions or support needs"></textarea>
+        </label>
+
+        <label class="consent-row">
+          <input type="checkbox" name="consent" required />
+          <span>I agree that WRC may contact me about programmes and trial sessions. *</span>
+        </label>
+        <p class="privacy-note">In the final version, information will be used only to respond to this enquiry and managed according to WRC’s privacy notice.</p>
+
+        <button class="btn primary submit-button" type="submit">Submit interest</button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <section class="submission-preview" data-submission-preview hidden aria-label="Google Sheet row preview">
+          <div>
+            <p class="eyebrow">Google Sheet row preview</p>
+            <strong>This is how the new record will appear.</strong>
+          </div>
+          <dl data-preview-fields></dl>
+          <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">View connected example sheet</a>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <script src="registration.js"></script>
+</body>
+</html>
