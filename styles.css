@@ -267,14 +267,6 @@ h1{
   background:rgba(17,19,24,.07);
   color:var(--navy);
 }
-.btn-tag{
-  margin-left:9px;
-  padding:3px 7px;
-  border-radius:999px;
-  background:rgba(255,255,255,.2);
-  font-size:9px;
-  letter-spacing:.08em;
-}
 .scroll-cue{
   position:absolute;
   left:50%;
@@ -725,7 +717,7 @@ html[lang="zh-CN"] .hero h2{
   font-size:clamp(54px,7vw,92px);
   line-height:.9;
 }
-.registration-intro > p:not(.eyebrow):not(.test-badge){
+.registration-intro > p:not(.eyebrow):not(.privacy-summary){
   max-width:550px;
   margin:28px 0 0;
   color:var(--muted);
@@ -741,13 +733,13 @@ html[lang="zh-CN"] .hero h2{
 .registration-steps span{grid-row:1/3;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.12em}
 .registration-steps strong{color:var(--navy)}
 .registration-steps small{color:var(--muted)}
-.test-badge{
+.privacy-summary{
   display:inline-flex;
   margin-top:28px;
   padding:8px 13px;
   border-radius:999px;
-  background:#fff3d6;
-  color:#7c5700;
+  background:#eaf7ee;
+  color:#16723a;
   font-size:12px;
   font-weight:750;
 }
@@ -763,21 +755,7 @@ html[lang="zh-CN"] .hero h2{
 .form-heading.compact{margin-bottom:28px}
 .form-heading.compact h2{font-size:34px}
 .registration-form{display:grid;gap:30px;margin-top:40px}
-.sheet-connection{
-  display:grid;
-  grid-template-columns:auto 1fr auto;
-  gap:12px;
-  align-items:center;
-  margin-top:28px;
-  padding:14px 16px;
-  border:1px solid #cfe6d6;
-  border-radius:14px;
-  background:#f2faf4;
-}
-.connection-dot{width:10px;height:10px;border-radius:50%;background:#2e9b55;box-shadow:0 0 0 4px rgba(46,155,85,.12)}
-.sheet-connection strong,.sheet-connection small{display:block}
-.sheet-connection small{margin-top:2px;color:var(--muted)}
-.sheet-connection a{color:#16723a;font-size:12px;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.website-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 .form-grid{display:grid;gap:20px}
 .two-columns{grid-template-columns:repeat(2,minmax(0,1fr))}
 .registration-form label > span:first-child,
@@ -845,23 +823,10 @@ html[lang="zh-CN"] .hero h2{
 .consent-row span{margin:0!important;font-weight:500!important}
 .privacy-note{margin:-20px 0 0 27px;color:var(--muted);font-size:12px}
 .submit-button{width:max-content;border:0;cursor:pointer}
+.submit-button:disabled{cursor:wait;opacity:.7;transform:none}
 .field-error,.form-status{display:none;margin:9px 0 0;color:#b42318;font-size:13px;font-weight:650}
 .field-error.visible,.form-status.error,.form-status.success{display:block}
 .form-status.success{padding:14px 16px;border-radius:12px;background:#eaf7ee;color:#16723a}
-.submission-preview{
-  padding:22px;
-  border:1px solid #cfd9e6;
-  border-radius:18px;
-  background:#f7f9fc;
-}
-.submission-preview[hidden]{display:none}
-.submission-preview .eyebrow{margin-bottom:6px;color:var(--blue)}
-.submission-preview dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:20px 0}
-.submission-preview dl div{padding:12px 0;border-top:1px solid #dfe4ea}
-.submission-preview dl div:nth-child(odd){padding-right:18px}
-.submission-preview dt{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
-.submission-preview dd{margin:3px 0 0;color:var(--navy);font-size:14px;font-weight:650;overflow-wrap:anywhere}
-.submission-preview > a{color:var(--blue);font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:3px}
 .registration-form.was-validated :invalid:not(fieldset){border-color:#d92d20}
 
 @media (max-width:900px){
@@ -874,10 +839,6 @@ html[lang="zh-CN"] .hero h2{
   .registration-back-mobile{display:block}
   .registration-card{padding:28px 20px;border-radius:20px}
   .two-columns,.choice-grid,.interest-grid{grid-template-columns:1fr}
-  .sheet-connection{grid-template-columns:auto 1fr}
-  .sheet-connection a{grid-column:2}
-  .submission-preview dl{grid-template-columns:1fr}
-  .submission-preview dl div:nth-child(odd){padding-right:0}
   .choice-card{min-height:auto}
   .registration-shell{padding-left:16px;padding-right:16px;gap:38px}
   .submit-button{width:100%}

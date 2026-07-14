@@ -15,7 +15,7 @@
     </a>
     <nav class="desktop-nav" aria-label="报名页面导航">
       <a href="index.html">返回官网</a>
-      <a class="lang-switch" href="../register-test.html">EN</a>
+      <a class="lang-switch" href="../register.html">EN</a>
     </nav>
     <a class="registration-back-mobile" href="index.html">返回</a>
   </header>
@@ -30,7 +30,7 @@
         <div><span>02</span><strong>课程匹配</strong><small>由 WRC 团队查看</small></div>
         <div><span>03</span><strong>联系家长</strong><small>通过邮件确认下一步</small></div>
       </div>
-      <p class="test-badge">测试模版 · 不会发送任何资料</p>
+      <p class="privacy-summary">您的资料将安全发送给 WRC，不会在网站上公开显示。</p>
     </section>
 
     <section class="registration-card" aria-labelledby="form-title">
@@ -40,16 +40,8 @@
         <p>带 * 的项目为必填项。</p>
       </div>
 
-      <aside class="sheet-connection" aria-label="Google Sheet 测试连接状态">
-        <span class="connection-dot" aria-hidden="true"></span>
-        <div>
-          <strong>Google Sheet 测试连接</strong>
-          <small>测试模式——提交后会在本页预览，但不会写入 Google Drive。</small>
-        </div>
-        <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">打开示例表格</a>
-      </aside>
-
       <form class="registration-form" data-registration-form novalidate>
+        <label class="website-field" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
         <div class="form-grid two-columns">
           <label><span>学生名字 *</span><input type="text" name="studentName" autocomplete="given-name" required /></label>
           <label>
@@ -100,18 +92,10 @@
 
         <label><span>还有什么需要告诉我们？</span><textarea name="notes" rows="4" placeholder="学习目标、方便时间、问题或需要的支持"></textarea></label>
         <label class="consent-row"><input type="checkbox" name="consent" required /><span>我同意 WRC 就课程和体验活动与我联系。*</span></label>
-        <p class="privacy-note">正式版本中的资料只用于回复本次咨询，并将按照 WRC 隐私说明进行管理。</p>
+        <p class="privacy-note">资料只用于回复本次咨询及管理 WRC 课程参与，不会在网站上公开显示。</p>
 
         <button class="btn primary submit-button" type="submit">提交报名意向</button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        <section class="submission-preview" data-submission-preview hidden aria-label="Google Sheet 新记录预览">
-          <div>
-            <p class="eyebrow">Google Sheet 新记录预览</p>
-            <strong>正式连接后，新报名将以这种方式加入表格。</strong>
-          </div>
-          <dl data-preview-fields></dl>
-          <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">查看已连接的示例表格</a>
-        </section>
       </form>
     </section>
   </main>
