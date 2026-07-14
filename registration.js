@@ -3,6 +3,21 @@ const status = document.querySelector('[data-form-status]');
 const interestError = document.querySelector('[data-interest-error]');
 const submitButton = form?.querySelector('button[type="submit"]');
 const registrationEndpoint = 'https://script.google.com/macros/s/AKfycbyNcoaDMqLHn5jB2JkYDkyiuW4QLwQNuhgilzr3L7gw4YG1SolmXxnIwXEGI8Q7U5E/exec';
+const eventNames = {
+  'national-robocup-2026': ['RoboCup National Rotorua', 'RoboCup 全国赛'],
+  'vex-iq-competition-2026': ['VEX IQ Competition', 'VEX IQ 区赛'],
+  'vex-iq-scrimmage-2026': ['VEX IQ Scrimmage', 'VEX IQ 惠灵顿友谊赛'],
+};
+const eventId = new URLSearchParams(window.location.search).get('event');
+const selectedEvent = document.querySelector('[data-selected-event]');
+const notesField = form?.querySelector('textarea[name="notes"]');
+if (eventId && eventNames[eventId]) {
+  const isChinese = document.documentElement.lang === 'zh-CN';
+  const eventName = eventNames[eventId][isChinese ? 1 : 0];
+  selectedEvent.hidden = false;
+  selectedEvent.textContent = `${isChinese ? '报名活动' : 'Selected event'}: ${eventName}`;
+  notesField.value = `[Event: ${eventId} — ${eventName}]\n`;
+}
 
 form?.addEventListener('submit', async (event) => {
   event.preventDefault();
