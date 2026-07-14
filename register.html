@@ -15,7 +15,7 @@
     </a>
     <nav class="desktop-nav" aria-label="Registration navigation">
       <a href="index.html">Back to Website</a>
-      <a class="lang-switch" href="zh/register-test.html">中文</a>
+      <a class="lang-switch" href="zh/register.html">中文</a>
     </nav>
     <a class="registration-back-mobile" href="index.html">Back</a>
   </header>
@@ -30,7 +30,7 @@
         <div><span>02</span><strong>We review</strong><small>Programme matching</small></div>
         <div><span>03</span><strong>We contact you</strong><small>Next steps by email</small></div>
       </div>
-      <p class="test-badge">Test template · No information will be sent</p>
+      <p class="privacy-summary">Your information is sent securely to WRC and is not displayed publicly.</p>
     </section>
 
     <section class="registration-card" aria-labelledby="form-title">
@@ -40,16 +40,8 @@
         <p>Fields marked with * are required.</p>
       </div>
 
-      <aside class="sheet-connection" aria-label="Connected Google Sheet test status">
-        <span class="connection-dot" aria-hidden="true"></span>
-        <div>
-          <strong>Google Sheet test connection</strong>
-          <small>Test mode — submissions are previewed here but not written to Drive.</small>
-        </div>
-        <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">Open example sheet</a>
-      </aside>
-
       <form class="registration-form" data-registration-form novalidate>
+        <label class="website-field" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
         <div class="form-grid two-columns">
           <label>
             <span>Student first name *</span>
@@ -124,18 +116,10 @@
           <input type="checkbox" name="consent" required />
           <span>I agree that WRC may contact me about programmes and trial sessions. *</span>
         </label>
-        <p class="privacy-note">In the final version, information will be used only to respond to this enquiry and managed according to WRC’s privacy notice.</p>
+        <p class="privacy-note">Information is used only to respond to this enquiry and manage WRC programme participation. It is not displayed publicly.</p>
 
         <button class="btn primary submit-button" type="submit">Submit interest</button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        <section class="submission-preview" data-submission-preview hidden aria-label="Google Sheet row preview">
-          <div>
-            <p class="eyebrow">Google Sheet row preview</p>
-            <strong>This is how the new record will appear.</strong>
-          </div>
-          <dl data-preview-fields></dl>
-          <a href="https://docs.google.com/spreadsheets/d/1bt3wP8S6rkLYxOru4EQFq_sIw_0xEHoiFdaE56i_O8M/edit" target="_blank" rel="noopener">View connected example sheet</a>
-        </section>
       </form>
     </section>
   </main>
